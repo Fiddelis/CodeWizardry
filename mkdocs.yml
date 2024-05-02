@@ -1,0 +1,83 @@
+site_name: Fiddelis
+site_description: Site dedicado a fornecer uma ampla variedade de artigos educacionais para ajudar os usuários em seus estudos.
+copyright: Copyright &copy; 2024 Fiddelis
+
+repo_url: https://github.com/Fiddelis/CodeWizardry
+
+extra_css:
+  - stylesheets/extra.css
+nav:
+  - Home: index.md
+  - Blog:
+      - 2024:
+          - blog/2024/template-post.md
+      - Subtopic:
+          - blog/subtopic/interesting-post.md
+theme:
+  logo: img/estrela.png
+  favicon: img/estrela.png
+  custom_dir: overrides
+  name: material
+  font: false
+  icon:
+    annotation: material/arrow-right-circle
+    logo: material/home
+  # Light and Dark Theme Toggle
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.indexes
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Fiddelis
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/lucasruan.ff
+    - icon: material/email
+      link: mailto:lucas.ruan@ges.inatel.br
+  blog:
+    dir: blog
+    author: Fiddelis
+    author_image: https://avatars.githubusercontent.com/u/120998736
+    words_read_per_minute: 300
+    list_length: 25
+    extended_preview: true
+
+markdown_extensions:
+  - toc:
+      title: On this page
+      permalink: true
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - meta
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
